@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if found_content %}
+        <ul>
+            {% for paragraph, style in found_content %}
+                <li>Paragraph: {{ paragraph }} (Style: {{ style }})</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No content related to the search string found.</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
